@@ -74,6 +74,28 @@ TARGET_LINK_LIBRARIES(
 	paho-mqtt3c
 )
 
+#added by qingchen for test########
+ADD_EXECUTABLE(
+		qingchen
+		qingchen.c
+)
+
+TARGET_LINK_LIBRARIES(
+		qingchen
+		paho-mqtt3as
+)
+
+#ADD_EXECUTABLE(
+#		testssl
+#		testssl.c
+#)
+
+#TARGET_LINK_LIBRARIES(
+#		testssl
+#		paho-mqtt3c
+#)
+###################################
+
 IF (WIN32)
 	ADD_CUSTOM_COMMAND(
 		TARGET test1 PRE_BUILD

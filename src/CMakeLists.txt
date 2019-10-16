@@ -67,6 +67,8 @@ ELSEIF (UNIX)
 ENDIF()
 
 ## common compilation for libpaho-mqtt3c and libpaho-mqtt3a
+
+
 ADD_LIBRARY(common_obj OBJECT ${common_src})
 SET_PROPERTY(TARGET common_obj PROPERTY POSITION_INDEPENDENT_CODE ON)
 
@@ -124,6 +126,7 @@ IF (PAHO_WITH_SSL)
     ELSE()
       SET(OPENSSL_SEARCH_LIB_PATH "${OPENSSL_SEARCH_PATH}/lib64")
     ENDIF ()
+
 
     FIND_PATH(OPENSSL_INCLUDE_DIR openssl/ssl.h
         HINTS ${OPENSSL_SEARCH_PATH}/include)
